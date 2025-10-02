@@ -1,1 +1,3 @@
-# Estudos-HTML-CSS-FACULDADE
+# Estudos-HTML-CSS-JS-FACULDADE
+
+Estudos de FRONT-END-faculdade
