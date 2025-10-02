@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../css/style02.css">
+     <title>CADASTRO</title>
+     <style>
+      body{
+    display: grid;
+    justify-content: center;
+    background-image: linear-gradient(to right, #C3CED4 0%, 19.682539999485016%, #E7E8EA 39.36507999897003%, 69.68253999948502%, #555453 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#nome{
+     border-radius: 4px;
+     padding: 5px;
+}
+#email{
+       border-radius: 4px;
+        padding: 5px;
+}
+#data{
+       border-radius: 4px;
+       padding: 5px;
+}
+#telefone{
+       border-radius: 4px;
+       padding: 5px;
+}
+button{
+     background-color: blue; color: white; padding: 8px 16px; border: none; border-radius: 5px;
+}
+p{
+     border: 2px solid red; padding: 10px;
+}
+h1{
+     font-size: 40px;
+}
+     </style>
+</head>
+<body>
+     
+       <h1>Cadastro</h1>
+
+  <form>
+     
+    <label for="nome">Nome:</label><br>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+    <br><br>
+
+  
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" placeholder="exemplo@email.com" required>
+    <br><br>
+
+ 
+    <label for="data">Data de Nascimento:</label><br>
+    <input type="date" id="data" name="data">
+    <br><br>
+ 
+    <label for="telefone">Telefone:</label><br>
+    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999">
+    <br><br>
+
+   
+    <button type="submit">
+      Enviar
+    </button>
+  </form>
+</body>
+</html>

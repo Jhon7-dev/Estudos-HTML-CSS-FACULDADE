@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4 - Drag & Drop</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #drag-image {
+            width: 100px;
+            height: 100px;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container1" class="container" style="background-color: #A9D18E;">
+        <img id="drag-image" src="img/download.jpg" draggable="true">
+    </div>
+
+    <div id="container2" class="container" style="background-color: #F8CBAD;">
+        <p>Solte aqui!</p>
+    </div>
+
+    <script>
+      
+        const dragImage = document.getElementById('drag-image');
+        const container2 = document.getElementById('container2');
+
+        dragImage.addEventListener('dragstart', (event) => {
+            
+            event.dataTransfer.setData('text/plain', event.target.id);
+        });
+
+       
+        container2.addEventListener('dragover', (event) => {
+           
+            event.preventDefault();
+        });
+
+        
+        container2.addEventListener('drop', (event) => {
+           
+            event.preventDefault();
+            
+           
+            const data = event.dataTransfer.getData('text/plain');
+            const draggedElement = document.getElementById(data);
+
+          
+            event.target.appendChild(draggedElement);
+        });
+    </script>
+
+</body>
+</html>
