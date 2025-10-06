@@ -1,0 +1,100 @@
+/*
+    Seletor Universal: Reset básico para todos os elementos.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+    Header Fixo: Exemplo de posicionamento com 'position: fixed'.
+    Usa a função `rgb()` para a cor de fundo.
+*/
+.header-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgb(206, 43, 55); /* Vermelho da bandeira da Itália */
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+}
+
+/* A imagem no topo do layout */
+.secao-imagem img {
+    display: block;
+    width: 100%;
+    margin-top: 59px; /* Para evitar que a imagem fique atrás do header fixo */
+}
+
+/*
+    Seção com duas divs lado a lado (50% de largura cada).
+    Usa o 'flexbox' para alinhar as divs.
+*/
+.secao-dupla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgb(245, 245, 245);
+}
+
+.div-lado-a-lado {
+    width: 50%;
+    padding: 30px;
+    text-align: center;
+    /* Exemplo de `font-family` com alternativas */
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+/* Exemplo de `border` em shorthand */
+.lado-1 {
+    border: 2px solid rgb(0, 140, 69); /* Verde da bandeira */
+}
+
+/* Exemplo de `background-color` com `rgb()` */
+.lado-2 {
+    background-color: rgb(255, 255, 255); /* Branco da bandeira */
+    border: 2px solid rgb(0, 140, 69);
+}
+
+/*
+    Div com largura calculada.
+    O 'calc(100% - 100px)' subtrai 100px da largura total.
+*/
+.div-calculada {
+    width: calc(100% - 100px);
+    margin: 30px auto; /* Centraliza a div */
+    padding: 30px;
+    text-align: center;
+    /* Exemplo de `background-color` com `rgba()` e transparência */
+    background-color: rgba(0, 140, 69, 0.15);
+    /* Exemplo de múltiplas cores em uma propriedade (sombra da caixa) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
+                0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Estilização básica para os textos */
+h1, h2, h3 {
+    margin-bottom: 10px;
+    color: rgb(51, 51, 51);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* Footer padrão */
+footer {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+}

@@ -1,0 +1,262 @@
+/* ---------- RESET GERAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f2f2;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  color: #222;
+}
+
+/* ---------- CONTAINER PRINCIPAL ---------- */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ---------- CARD GERAL ---------- */
+.cardapio, .banner-1, .links, .lista, .texto {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardapio:hover, .banner-1:hover, .links:hover, .lista:hover, .texto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ---------- CABEÇALHO DO CARD ---------- */
+.banner-1 {
+  grid-column: 1 / -1;
+  padding: 30px;
+  background: linear-gradient(135deg, #e0b97d, #d6a85b);
+  color: #fff;
+  text-align: left;
+}
+
+.banner-1 h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.banner-1 p {
+  margin-top: 12px;
+  color: #fdfdfd;
+  line-height: 1.6;
+}
+
+/* ---------- IMAGENS --*
+/* ---------- RESET GERAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f2f2f2;
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  color: #222;
+}
+
+/* ---------- CONTAINER PRINCIPAL ---------- */
+.main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* ---------- CARD GERAL ---------- */
+.cardapio, .banner-1, .links, .lista, .texto {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 420px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cardapio:hover, .banner-1:hover, .links:hover, .lista:hover, .texto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ---------- CABEÇALHO DO CARD ---------- */
+.banner-1 {
+  grid-column: 1 / -1;
+  padding: 30px;
+  background: linear-gradient(135deg, #e0b97d, #d6a85b);
+  color: #fff;
+  text-align: left;
+}
+
+.banner-1 h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.banner-1 p {
+  margin-top: 12px;
+  color: #fdfdfd;
+  line-height: 1.6;
+}
+
+/* ---------- IMAGENS ---------- */
+.cardapio img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ---------- DESCRIÇÃO ---------- */
+.cardapio p {
+  padding: 20px;
+  font-size: 0.95rem;
+  text-align: justify;
+  flex-grow: 1;
+}
+
+/* ---------- LINKS ---------- */
+.links {
+  padding: 30px;
+}
+
+.links h2 {
+  margin-bottom: 15px;
+  color: #0d47a1;
+}
+
+.links a {
+  display: block;
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* :link → link normal */
+.links a:link {
+  color: #1565c0;
+  background: #e3f2fd;
+}
+
+/* :visited → link já visitado */
+.links a:visited {
+  color: #6a1b9a;
+  background: #f3e5f5;
+}
+
+/* :hover → quando o mouse passa */
+.links a:hover {
+  background: #1565c0;
+  color: #fff;
+  transform: translateX(5px);
+}
+
+/* ---------- LISTA ---------- */
+.lista {
+  padding: 30px;
+}
+
+.lista h2 {
+  margin-bottom: 10px;
+  color: #1b5e20;
+}
+
+.lista ul {
+  list-style: none;
+}
+
+.lista li {
+  background: #f5f5f5;
+  padding: 8px 10px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  transition: background 0.3s;
+}
+
+/* :first-child */
+.lista li:first-child {
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+/* :nth-child(3) */
+.lista li:nth-child(3) {
+  background: #fff3e0;
+  color: #ef6c00;
+  font-style: italic;
+}
+
+.lista li:hover {
+  background: #ddd;
+}
+
+/* ---------- TEXTO COM PSEUDOS ---------- */
+.texto {
+  padding: 30px;
+}
+
+.texto h2 {
+  margin-bottom: 10px;
+  color: #1a237e;
+}
+
+.estilo-texto {
+  font-size: 1rem;
+  text-align: justify;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ::first-letter */
+.estilo-texto::first-letter {
+  font-size: 2.2em;
+  color: #c62828;
+  font-weight: bold;
+  float: left;
+  margin-right: 8px;
+}
+
+/* ::first-line */
+.estilo-texto::first-line {
+  font-variant: small-caps;
+  color: #1a237e;
+}
+ 
+.card-footer {
+  background: #263238;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 0.85rem;
+  border-radius: 0 0 10px 10px;
+  margin-top: auto;
+}
