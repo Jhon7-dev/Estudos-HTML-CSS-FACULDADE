@@ -1,94 +1,46 @@
-📘 Disciplina: Linguagens de Programação
-📌  Tema: CSS – Fundamentos, Unidades de Medida e Seletores
-🔹 Enunciado da Atividade
+## 1. Exercício 1 – Estrutura e Estilização Base
+Esta é uma ótima série de exercícios para consolidar os fundamentos de HTML e CSS.
 
-Prezados(as) alunos(as),
+Objetivo: Criar a estrutura HTML básica e aplicar estilos iniciais usando o CSS externo.
 
-Nesta atividade, vocês deverão criar 4 arquivos HTML com estilos externos (arquivo CSS separado) dentro da pasta css/. Cada arquivo deve conter comentários explicativos no código, mostrando a finalidade de cada seletor e propriedade utilizados.
+## HTML: Estrutura com <header>, <section> (com dois parágrafos) e <footer> padronizado.
 
-🚩🚩 Utilize para referência o material de aula: 6. CSS Fundamentos.pdf (Slides 1 a 26).
+## CSS:Alteração de cor de fundo do cabeçalho,Centralização do título,Mudança de cor do texto dos parágrafos.
 
-✅ Exercício 1 – Estrutura e Estilização Base
-📂 Nome do arquivo: ex1_basico.html
-📂 Nome da folha de estilo: style1.css
+## Uso obrigatório de diferentes unidades de medida (px, %, em, rem) para tamanhos de fontes e largura.
 
-Crie uma página HTML com estrutura básica contendo:
+## 2. Exercício 2 – Prática com Seletores
+Esta é uma ótima série de exercícios para consolidar os fundamentos de HTML e CSS.
+ 
+## HTML: Contém pelo menos 5 elementos distintos (h1, p, ul, div, etc.) para estilização.
 
-Um <header> com título e subtítulo.
+## CSS: Aplica estilos visuais distintos (cores, tamanhos, alinhamentos) usando os seguintes seletores:
 
-Uma <section> com dois parágrafos.
+## Universal (*),Elemento (p, h1),Classe (.minha-classe),ID (#meu-id),Descendente (div p),Combinado/Agrupamento (h1, h2),Comentários: Inclui comentários detalhando a função e a diferença de cada seletor.
 
-Um <footer> padronizado (ver instruções no final).
+## 3. Exercício 3 – Pseudo-classes e Pseudo-elementos
+Objetivo: Estilizar elementos com base em estados (pseudo-classes) e partes específicas de elementos (pseudo-elementos).
 
-Aplique no CSS externo:
+## HTML: Inclui links e uma lista não ordenada.
 
-Alteração da cor de fundo do header.
+## CSS: Links: Estiliza diferentes estados de link (:link, :hover, :visited),Lista: Usa pseudo-classes estruturais como :first-child e :nth-child() para aplicar estilos seletivos,Parágrafo: Usa pseudo-elementos ::first-letter e ::first-line para formatação tipográfica,Comentários: Inclui comentários explicando a função de cada pseudo-classe e pseudo-elemento.
 
-Centralização do título.
+## 4. Exercício 4 – Layout Dinâmico e Funções
 
-Mudança da cor do texto dos parágrafos.
+Objetivo: Criar um layout simples e dinâmico, explorando funções CSS e formatação em shorthand.
 
-Aplicação de diferentes unidades de medida (px, %, em, rem) no tamanho das fontes e larguras dos elementos.
+## Layout:<header> com posicionamento fixo no topo (position: fixed),<section> contendo duas divs lado a lado (50% de largura cada),Uma div com largura calculada usando a função calc(100% - 100px).
 
-✅ Exercício 2 – Prática com Seletores
-📂 Nome do arquivo: ex2_seletores.html
-📂 Nome da folha de estilo: style2.css
+## CSS:Uso de border em notação shorthand,Definição de font-family com alternativas,Definição de cor de fundo usando rgb() ou rgba(),Uso de funções e múltiplos valores em outras propriedades.
 
-Crie uma página com pelo menos 5 elementos diferentes (h1, p, ul, li, div, etc.) e aplique no CSS:
 
-Seletor universal
 
-Seletor de elemento
 
-Seletor de classe
 
-Seletor de ID
 
-Seletor descendente (div p) e combinado (h1, h2)
 
-Cada seletor deve ter um estilo visual distinto, com cores, tamanhos e alinhamentos diferentes.
-Inclua também um comentário explicando a diferença entre cada tipo de seletor.
 
-✅ Exercício 3 – Pseudo-classes e Pseudo-elementos
-📂 Nome do arquivo: ex3_pseudo.html
-📂 Nome da folha de estilo: style3.css
 
-Crie um conteúdo com:
 
-Pelo menos 2 links (<a>) com estados diferentes estilizados (:link, :hover, :visited).
 
-Uma lista com pseudo-classes como :first-child e :nth-child().
 
-Um parágrafo estilizado com ::first-letter e ::first-line.
-
-Inclua comentários explicando o que cada pseudo-classe e pseudo-elemento faz.
-
-✅ Exercício 4 – Layout Dinâmico e Funções
-📂 Nome do arquivo: ex4_layout.html
-📂 Nome da folha de estilo: style4.css
-
-Crie um pequeno layout com:
-
-Um header fixo no topo.
-
-Uma section com duas divs lado a lado (50% de largura cada).
-
-Uma div com largura calculada usando calc(100% - 100px).
-
-No CSS, use:
-
-border em shorthand.
-
-font-family com alternativas.
-
-background-color com rgb() ou rgba().
-
-Funções e múltiplos valores em propriedades.
-
-📥 Footer Padronizado (Obrigatório em todos os arquivos)
-Todos os arquivos devem conter um <footer> com as seguintes informações:
-
-<footer>
-  <p>Desenvolvido por: [SEU NOME] | Linguagens de Programação - FACENS | &copy; 2025</p>
-</footer>
-O footer deve estar centralizado e com fundo escuro e texto claro, estilizado no CSS externo.
