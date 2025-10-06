@@ -1,4 +1,4 @@
-[200~📝 Requisitos da Página
+📝 Requisitos da Página
 Cabeçalho (Header): Inclua links para redes sociais usando ícones do Font Awesome.
 
 Banner Principal:
