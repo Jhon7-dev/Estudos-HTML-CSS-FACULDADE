@@ -2,99 +2,168 @@
     Seletor Universal: Reset básico para todos os elementos.
 */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /*
     Header Fixo: Exemplo de posicionamento com 'position: fixed'.
     Usa a função `rgb()` para a cor de fundo.
 */
-.header-fixo {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgb(206, 43, 55); /* Vermelho da bandeira da Itália */
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
-    z-index: 1000;
-}
+/*img {
+  width: 300px; largura fixa
+  height: 300px; /* altura fixa */
+  /* object-fit: cover; corta a imagem mantendo proporção */
+  /* border-radius: 10px; opcional, arredonda as bordas */
+/* } */
+header {
+  /* background-image: url(img/pexels-viktoria-alipatova-1083711-2074130.jpg); */
+  /* height: 900px; */
+  /* object-fit: cover; */
+  background: #302626;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* background: #4B2E05; */
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
 
-/* A imagem no topo do layout */
-.secao-imagem img {
-    display: block;
-    width: 100%;
-    margin-top: 59px; /* Para evitar que a imagem fique atrás do header fixo */
+  /* justify-content: center; */
 }
-
-/*
-    Seção com duas divs lado a lado (50% de largura cada).
-    Usa o 'flexbox' para alinhar as divs.
-*/
-.secao-dupla {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
-    background-color: rgb(245, 245, 245);
+.titulo-header {
+  display: block;
+  font-size: 50px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: bold;
+  color: white;
+  font-weight: 100;
 }
-
-.div-lado-a-lado {
-    width: 50%;
-    padding: 30px;
-    text-align: center;
-    /* Exemplo de `font-family` com alternativas */
-    font-family: Georgia, 'Times New Roman', serif;
+nav {
+  display: flex; /* Para alinhar os links lado a lado */
+  gap: 50px; /* Adiciona espaçamento entre os links */
 }
+.links {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: white; /* Cor do texto, pode ser alterada */
+  /* font-family: Arial, sans-serif; */
+  font-family: Georgia, "Times New Roman", Times, serif;
 
-/* Exemplo de `border` em shorthand */
-.lado-1 {
-    border: 2px solid rgb(0, 140, 69); /* Verde da bandeira */
+  font-size: 28px;
+  position: relative; /* Fundamental para posicionar o sublinhado */
+  padding: 35px 0; /* Adiciona espaço vertical para que o sublinhado não cole no texto */
 }
-
-/* Exemplo de `background-color` com `rgb()` */
-.lado-2 {
-    background-color: rgb(255, 255, 255); /* Branco da bandeira */
-    border: 2px solid rgb(0, 140, 69);
+.links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Espessura do sublinhado */
+  background-color: white; /* Cor do sublinhado, pode ser alterada */
+  transform: scaleX(0); /* Inicialmente, o sublinhado tem largura zero */
+  transform-origin: bottom left; /* A animação começa no canto inferior esquerdo */
+  transition: transform 0.3s ease-out; /* Transição suave para a animação */
 }
-
-/*
-    Div com largura calculada.
-    O 'calc(100% - 100px)' subtrai 100px da largura total.
-*/
-.div-calculada {
-    width: calc(100% - 100px);
-    margin: 30px auto; /* Centraliza a div */
-    padding: 30px;
-    text-align: center;
-    /* Exemplo de `background-color` com `rgba()` e transparência */
-    background-color: rgba(0, 140, 69, 0.15);
-    /* Exemplo de múltiplas cores em uma propriedade (sombra da caixa) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1),
-                0 6px 20px rgba(0, 0, 0, 0.15);
+.links:hover::after {
+  transform: scaleX(1); /* Ao passar o mouse, a largura se expande para 100% */
 }
-
-/* Estilização básica para os textos */
-h1, h2, h3 {
-    margin-bottom: 10px;
-    color: rgb(51, 51, 51);
+#container {
+  display: grid;
+  grid-column: auto auto;
+  /* justify-content: center; */
+  justify-items: center;
 }
-
-p {
-    line-height: 1.6;
+.img-cafe-banner{
+  color: rgba(0, 0, 0, 0.2);
+  max-width: 100%;
+  height: 500px;
+  width: 400px;
+  border-radius: 4px;
 }
+.banner-1 {
+  grid-column: 1;
+  width: 50%;
+  padding: 30px 30px;
+}
+.banner-2 {
+  width: 50%;
+  grid-column:2 ;
+  padding: 50px;
+  align-items: center;
+  align-self: center;
 
+}
 /* Footer padrão */
 footer {
-    background-color: rgb(51, 51, 51);
-    color: #fff;
-    text-align: center;
-    padding: 15px 0;
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+.cafe-section {
+  height: 100vh; /* ocupa a altura total da tela */
+  background-image: url(img/img-banner.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* efeito parallax */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #F5F3EF;
+  font-family: "Merriweather", Georgia, serif;
+}
+
+/* camada de cor por cima da imagem */
+.overlay {
+  /* background-color: rgba(75, 46, 5, 0.6); marrom translúcido */
+  padding: 60px;
+  /* border-radius: 20px; */
+  text-align: center;
+  /* align-items: start; */
+  /* align-self: flex-end; */
+  /* justify-self: center; */
+  width: calc(100% - 100px); /* conforme o requisito do exercício */
+  /* border: 2px solid rgba(166, 124, 82, 0.4); */
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+/* texto e botão */
+.overlay h2 {
+  font-size: 3.4rem;
+  margin-top: 80px;
+  /* margin-bottom: 0px; */
+}
+
+.overlay p {
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+}
+
+.overlay button {
+  background-color: #B08968;
+  color: #fff;
+  border: none;
+  padding: 17px 25px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.overlay button:hover {
+  background-color: #A67C52;
+}
+.titulo-banner-2{
+  font-size:
 }
