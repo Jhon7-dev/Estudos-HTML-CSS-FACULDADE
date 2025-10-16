@@ -1,45 +1,104 @@
-## 1. Exercício 1 – Estrutura e Estilização Base
-Esta é uma ótima série de exercícios para consolidar os fundamentos de HTML e CSS.
+# 🧠 Exercícios de HTML e CSS – Fundamentos e Prática
 
-Objetivo: Criar a estrutura HTML básica e aplicar estilos iniciais usando o CSS externo.
+Este repositório contém uma série de **4 exercícios práticos** desenvolvidos para consolidar os conceitos fundamentais de **HTML e CSS**.  
+Cada exercício aborda tópicos essenciais — desde estrutura e estilização básica até seletores, pseudo-classes e layout dinâmico.
 
-## HTML: Estrutura com <header>, <section> (com dois parágrafos) e <footer> padronizado.
+---
 
-## CSS:Alteração de cor de fundo do cabeçalho,Centralização do título,Mudança de cor do texto dos parágrafos.
+## 📘 Exercício 1 – Estrutura e Estilização Base
 
-## Uso obrigatório de diferentes unidades de medida (px, %, em, rem) para tamanhos de fontes e largura.
+### 🎯 Objetivo
+Criar a estrutura HTML básica e aplicar estilos iniciais usando **CSS externo**.
 
-## 2. Exercício 2 – Prática com Seletores
-Esta é uma ótima série de exercícios para consolidar os fundamentos de HTML e CSS.
- 
-## HTML: Contém pelo menos 5 elementos distintos (h1, p, ul, div, etc.) para estilização.
+### 🧩 Instruções
+**HTML**
+- Criar um documento HTML com:
+  - Um cabeçalho (`<header>`)
+  - Um corpo principal (`<main>`) com **dois parágrafos**
+  - Um rodapé (`<footer>`) padronizado
 
-## CSS: Aplica estilos visuais distintos (cores, tamanhos, alinhamentos) usando os seguintes seletores:
+**CSS**
+- Alterar a **cor de fundo do cabeçalho**
+- Centralizar o **título principal**
+- Mudar a **cor do texto dos parágrafos**
+- Utilizar **diferentes unidades de medida**:
+  - `px`, `%`, `em`, `rem` (para tamanhos de fonte e larguras)
 
-## Universal (*),Elemento (p, h1),Classe (.minha-classe),ID (#meu-id),Descendente (div p),Combinado/Agrupamento (h1, h2),Comentários: Inclui comentários detalhando a função e a diferença de cada seletor.
+### 💡 Conceitos praticados
+- Estrutura básica do HTML
+- Ligação de CSS externo
+- Hierarquia de elementos e semântica
+- Unidades de medida relativas e absolutas
 
-## 3. Exercício 3 – Pseudo-classes e Pseudo-elementos
-Objetivo: Estilizar elementos com base em estados (pseudo-classes) e partes específicas de elementos (pseudo-elementos).
+---
 
-## HTML: Inclui links e uma lista não ordenada.
+## 🎨 Exercício 2 – Prática com Seletores
 
-## CSS: Links: Estiliza diferentes estados de link (:link, :hover, :visited),Lista: Usa pseudo-classes estruturais como :first-child e :nth-child() para aplicar estilos seletivos,Parágrafo: Usa pseudo-elementos ::first-letter e ::first-line para formatação tipográfica,Comentários: Inclui comentários explicando a função de cada pseudo-classe e pseudo-elemento.
+### 🎯 Objetivo
+Aplicar estilos visuais usando **diversos tipos de seletores CSS**.
 
-## 4. Exercício 4 – Layout Dinâmico e Funções
+### 🧩 Instruções
+**HTML**
+- Criar uma página contendo **pelo menos 5 elementos distintos**, como:
+  - `<h1>`, `<p>`, `<ul>`, `<div>`, `<section>`, etc.
 
-Objetivo: Criar um layout simples e dinâmico, explorando funções CSS e formatação em shorthand.
+**CSS**
+- Aplicar estilos diferentes usando:
+  - Seletor **universal**: `*`
+  - Seletor de **elemento**: `p`, `h1`
+  - Seletor de **classe**: `.minha-classe`
+  - Seletor de **ID**: `#meu-id`
+  - Seletor **descendente**: `div p`
+  - **Agrupamento de seletores**: `h1, h2`
+- Incluir **comentários** no código explicando a função e a diferença entre cada seletor.
 
-## Layout:<header> com posicionamento fixo no topo (position: fixed),<section> contendo duas divs lado a lado (50% de largura cada),Uma div com largura calculada usando a função calc(100% - 100px).
+### 💡 Conceitos praticados
+- Hierarquia e especificidade de seletores
+- Organização de código CSS
+- Importância de comentários explicativos
 
-## CSS:Uso de border em notação shorthand,Definição de font-family com alternativas,Definição de cor de fundo usando rgb() ou rgba(),Uso de funções e múltiplos valores em outras propriedades.
+---
 
+## 🧩 Exercício 3 – Pseudo-classes e Pseudo-elementos
 
+### 🎯 Objetivo
+Estilizar elementos com base em **estados** e **partes específicas** dos elementos.
 
+### 🧩 Instruções
+**HTML**
+- Incluir:
+  - Pelo menos **um link** (`<a>`)
+  - Uma **lista não ordenada** (`<ul>` com `<li>`)
 
+**CSS**
+- **Links**: usar pseudo-classes `:link`, `:hover`, `:visited`
+- **Listas**: aplicar pseudo-classes estruturais:
+  - `:first-child`
+  - `:nth-child()`
+- **Parágrafos**: aplicar pseudo-elementos:
+  - `::first-letter` → estiliza a **primeira letra**
+  - `::first-line` → estiliza a **primeira linha**
+- Incluir **comentários explicando** a função de cada pseudo-classe e pseudo-elemento.
 
+### 💡 Conceitos praticados
+- Pseudo-classes e pseudo-elementos
+- Interatividade visual com hover
+- Seleção de partes específicas de um elemento
 
+---
 
+## 🧱 Exercício 4 – Layout Dinâmico e Funções CSS
 
+### 🎯 Objetivo
+Criar um **layout simples e dinâmico**, utilizando **posicionamento**, **funções CSS** e **propriedades shorthand**.
+
+### 🧩 Instruções
+**Layout**
+- Criar um `<header>` fixo no topo (`position: fixed`)
+- Adicionar **duas `<div>` lado a lado**, com 50% da largura cada
+- Criar uma `<div>` extra com largura calculada usando:
+  ```css
+  width: calc(100% - 100px);
 
 
 
