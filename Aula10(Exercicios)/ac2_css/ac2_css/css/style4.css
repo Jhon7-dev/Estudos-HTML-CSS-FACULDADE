@@ -1,0 +1,252 @@
+/* =======================================
+   PROJETO: ECOTOUR LANDING PAGE
+   Demonstração de Position, Float e Sticky
+   ======================================= */
+
+/* ---------------------------------------
+   RESET, VARIÁVEIS E TIPOGRAFIA
+   --------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary: #0d47a1; /* Azul Escuro */
+    --secondary: #ffc107; /* Amarelo (Destaque) */
+    --background-dark: #37474f; /* Cinza Escuro Suave */
+    --text-light: #f4f4f4;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    background-color: var(--text-light);
+}
+
+.container-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 { color: var(--primary); margin-bottom: 15px; }
+
+/* Espaçador para o conteúdo não ficar escondido pelo menu fixo */
+.header-padding {
+    height: 70px; /* Igual à altura do menu-fixo */
+}
+
+/* ---------------------------------------
+   1. position: fixed (Menu Fixo)
+   --------------------------------------- */
+.menu-fixo {
+    position: fixed; /* Fixo na viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: var(--primary);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.menu-fixo nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--secondary); }
+.menu-fixo a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 400;
+    transition: color 0.2s;
+}
+.menu-fixo a:hover { color: var(--secondary); }
+
+/* ---------------------------------------
+   HERO SECTION (Imagem de Fundo)
+   --------------------------------------- */
+.hero-section {
+    /* Imagem de Fundo (Simulando o layout de montanha) */
+    background-image: url('https://via.placeholder.com/1200x450/263238/ffffff?text=Montanhas+e+Lago');
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 40px;
+}
+.hero-section h1 { font-size: 3rem; color: white; margin-bottom: 5px; }
+.hero-section p { font-size: 1.2rem; }
+
+/* ---------------------------------------
+   2. DEMONSTRAÇÃO DE POSITION
+   --------------------------------------- */
+.secao-destaques {
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* Elemento pai essencial para position: absolute */
+.posicionamento-container {
+    position: relative; /* Contexto para o elemento ABSOLUTE */
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 250px; /* Altura definida para alinhamento */
+    margin-top: 30px;
+    margin-bottom: 80px;
+    background-color: #f0f4f7;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+/* position: relative */
+.relative-demo {
+    position: relative; 
+    top: 20px; /* Deslocamento em relação à sua posição normal, mantendo o espaço */
+    background-color: #e3f2fd; /* Azul Claro */
+}
+
+/* position: absolute */
+.absolute-demo {
+    position: absolute; /* Sai do fluxo e se posiciona em relação ao ancestral relative (o container) */
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 10px;
+    top: -20px; /* Sobreposto 20px acima do topo do .posicionamento-container */
+    right: 350px; /* Posicionado à direita, fora do fluxo normal dos cards */
+    width: 100px; /* Selo pequeno */
+    height: 100px;
+    border-radius: 50%; /* Transforma em círculo */
+    line-height: 80px;
+    text-align: center;
+    z-index: 10; 
+}
+
+/* Caixa no Fluxo Normal */
+.normal-flow-demo {
+    background-color: #e8f5e9; /* Verde Claro */
+}
+
+/* Conteúdo Longo para Ativar Sticky */
+.conteudo-longo {
+    min-height: 1200px;
+    background-color: var(--text-light);
+    padding: 20px 0;
+    margin-top: 20px;
+}
+.scroll-filler {
+    height: 900px;
+    background: repeating-linear-gradient(45deg, #e0e0e0, #e0e0e0 10px, var(--text-light) 10px, var(--text-light) 20px);
+}
+
+/* ---------------------------------------
+   3. position: sticky & 4. FLOAT
+   --------------------------------------- */
+.secao-float {
+    background-color: var(--background-dark);
+    padding: 40px;
+    color: var(--text-light);
+    overflow: hidden; /* Contém o float */
+}
+
+.float-area-content {
+    max-width: 900px; /* Limita a largura do texto para melhor leitura */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* position: sticky (Barra Lateral Call-to-Action) */
+.sticky-side-bar {
+    position: sticky; /* Gruda no topo ao rolar */
+    top: 90px; /* Gruda 90px abaixo do topo (abaixo do menu fixo) */
+    float: right; /* Flutua à direita, liberando espaço para o conteúdo principal */
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    margin-left: 30px; 
+    color: #333;
+    z-index: 9; 
+    border-top: 5px solid var(--secondary);
+}
+.sticky-side-bar h3 { color: var(--primary); margin-bottom: 10px; }
+.cta-sticky {
+    background-color: var(--secondary);
+    color: var(--primary);
+    font-weight: 700;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Layout com Float: Imagens Envolvidas */
+.float-content {
+    margin-bottom: 40px;
+}
+
+.clear-float {
+    clear: both; /* Limpa o float para o próximo bloco de conteúdo começar abaixo */
+}
+
+.float-left-img, .float-right-img {
+    margin-bottom: 15px;
+    border: 5px solid var(--primary);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 280px;
+    height: auto;
+    display: block;
+}
+
+.float-left-img {
+    float: left; 
+    margin-right: 25px; 
+}
+
+.float-right-img {
+    float: right; 
+    margin-left: 25px; 
+}
+
+.destaque {
+    font-weight: bold;
+    color: var(--secondary);
+}
+
+/* Rodapé */
+.rodape {
+    background-color: var(--primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+}

@@ -1,0 +1,160 @@
+/*
+======================================================
+1. RESET, BOX-SIZING E ESTRUTURA
+======================================================
+*/
+* {
+    /* box-sizing: border-box é o padrão recomendado para facilitar o layout */
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background-color: #f4f7f9;
+}
+
+.main-header {
+    background-color: #1a1a2e; /* Azul Marinho Escuro */
+    color: white;
+    padding: 40px 20px 20px;
+    text-align: center;
+    border-bottom: 5px solid #ff6a8e; /* Rosa de Destaque */
+}
+
+.conteudo-review {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    
+    /* Importante para conter o float: left; da imagem e evitar quebra */
+    overflow: hidden; 
+}
+
+h2 {
+    color: #1a1a2e;
+    margin: 30px 0 15px 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+/*
+======================================================
+2. CAIXAS DE ESPECIFICAÇÕES (Inline-Block e Box Model)
+======================================================
+*/
+.cards-especificacoes {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.card-item {
+    /* BOX MODEL - Propriedades solicitadas */
+    width: 250px;
+    height: 100px;
+    padding: 15px;      /* Espaço INTERNO */
+    margin: 10px;       /* Espaço EXTERNO */
+    border: 3px solid #ff6a8e; /* Borda */
+    
+    /* LAYOUT - Alinhamento lado a lado */
+    display: inline-block;
+    vertical-align: top;
+    
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.card-item h3 {
+    color: #ff6a8e;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* BOX-SIZING DEMOSTRAÇÃO */
+/* Esta é a forma que torna o elemento MAIOR */
+.content-box-demo {
+    box-sizing: content-box; 
+    border-color: #3f51b5; /* Cor diferente para notar a diferença */
+}
+
+/* Esta é a forma moderna e previsível */
+.box-border-demo {
+    box-sizing: border-box; 
+}
+
+/*
+======================================================
+3. LAYOUT DO FLOAT (Imagem)
+======================================================
+*/
+
+.review-imagem-container {
+    /* Define a flutuação da imagem */
+    float: left;
+    
+    /* Espaçamento entre a imagem e o texto */
+    margin-right: 25px; 
+    margin-bottom: 15px;
+    
+    /* Modelo de Caixas na imagem */
+    padding: 5px; 
+    border: 1px solid #ccc;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-imagem {
+    display: block;
+    max-width: 350px;
+    height: auto;
+}
+
+.review-texto-paragrafo {
+    /* O texto flui ao redor da imagem flutuante */
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.destaque-margin, .destaque-padding {
+    font-weight: bold;
+    color: #3f51b5; /* Destaque azul */
+    background-color: #e6e9ff;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+/* Limpando o float para garantir que o rodapé ou elementos estruturais não subam */
+.clear-demo {
+    clear: both; /* PROPRIEDADE CHAVE */
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+    font-size: 0.8em;
+    color: #6c757d;
+}
+
+.main-footer {
+    background-color: #333;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9em;
+}
+/* Limpando o float para garantir que o rodapé ou elementos estruturais não subam */
+.fluxo-controle-nota {
+    clear: both; /* PROPRIEDADE CHAVE */
+    margin-top: 30px;
+    padding-top: 10px;
+    border-top: 1px dashed #ccc;
+    text-align: center;
+    font-size: 0.8em;
+    color: #6c757d;
+}

@@ -1,0 +1,110 @@
+ /* ===========================
+   Guia de Viagem - style.css
+   Mostra: seletor universal, elemento, classe, id e combinados
+   =========================== */
+
+/* seletor universal: reinicia alguns valores básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* seletor de elemento: h1/h2 estilizados globalmente */
+h1 {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 2rem;
+  color: #0b3d91;
+  text-align: center;
+  margin: 1.2rem 0 0.25rem;
+}
+
+h2 {
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  font-size: 1.1rem;
+  color: #2e6f9e;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* classe para subtítulo */
+.sub {
+  font-weight: 600;
+  letter-spacing: 0.6px;
+}
+
+/* nav > ul (seletor combinado) */
+nav.destinos-nav ul {
+  display: flex;
+  gap: 0.6rem;
+  max-width: 900px;
+  margin: 0.8rem auto;
+  justify-content: center;
+  list-style: none;
+}
+
+/* classe .dest aplicada a todos os itens */
+.dest {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* classes diferentes — demonstração de como .classe impacta */
+.praia { background: linear-gradient(135deg,#ff9a76,#ff6b6b); }
+.cidade { background: linear-gradient(135deg,#6bb9ff,#2b7be9); }
+.serra  { background: linear-gradient(135deg,#a7f3d0,#38b2ac); color:#083; }
+.floresta{ background: linear-gradient(135deg,#7de3a8,#2fa24a); color:#042; }
+.interior{ background: linear-gradient(135deg,#f7e7a2,#f0a04b); color:#5a3200; }
+
+/* .info .card: seletor combinado com descendant (div p dentro da section) */
+.info {
+  max-width: 900px;
+  margin: 1.2rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(360px,1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+/* estilo para cada card (seletor de classe) */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(12,18,35,0.06);
+  border: 1px solid rgba(10,20,40,0.04);
+}
+
+/* ID tem prioridade sobre class: ID #destaque fica mais chamativo */
+#destaque {
+  border: 2px solid #0b3d91;
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(11,61,145,0.12);
+}
+
+/* seletor de elemento p dentro do card — mostra combinados */
+.card p {
+  color: #333;
+  margin-top: 0.6rem;
+  line-height: 1.45;
+}
+
+/* classes internas */
+.desc { font-size: 0.95rem; color: #444; }
+.dica { font-size: 0.9rem; color: #666; font-style: italic; }
+
+/* footer (seletor de elemento) */
+.rodape {
+  text-align: center;
+  padding: 1.2rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Comentário no CSS sobre cascade:
+   - Regras com ID (#destaque) têm maior especificidade que classes (.card).
+   - O seletor universal (*) define comportamento base.
+   - Se dois seletores tiverem a mesma especificidade, o último no arquivo vence.
+*/
