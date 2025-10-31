@@ -1,0 +1,318 @@
+body {
+  display: grid;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0px;
+  /* background: linear-gradient(to bottom, #1a0433 0%, #5a1a68 50%, #d62e92 100%); */
+  height: 100vh;
+}
+header {
+  display: inline-block;
+  text-align: center;
+  /* background: linear-gradient(to bottom, #ff7a00 0%, #ffae00 100%); */
+  background: #5b2d20;
+}
+
+.titulo-header {
+  font-size: 4rem;
+  /* font-weight: 400; */
+  color: #fafafa;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  /* text-shadow: 4px 4px  3px white;  */
+  text-transform: uppercase;
+}
+strong {
+  color: #ff7a00;
+}
+.subtitulo-header {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  /* color: rgb(212, 204, 204); */
+  color: #f4a300;
+}
+#banner-1 {
+  display: grid;
+  grid-column: 1fr;
+  justify-content: center;
+  align-content: center;
+  background: #d9d9d9;
+}
+.descricao-banner-1 {
+  font-size: 1.5em;
+  padding: 1.5em;
+  color: black;
+}
+.descricao-banner-2 {
+   
+  color: rgb(59, 46, 46);
+   font-size: 1.5em;
+   padding: 1.5em;
+   text-align: justify;
+}
+
+.footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: black;
+}
+.padrao-footer {
+  font-size: 19px;
+  color: white;
+}
+/*
+    COMENTÁRIOS SOBRE OS SELETORES
+    - Seletor Universal (*): Aplica estilo a TODOS os elementos da página. Ideal para "resetar" margens e paddings padrão.
+    - Seletor de Elemento (h1, p, li): Aplica estilo a todas as tags HTML de um tipo específico.
+    - Seletor de Classe (.conteiner, .imagem): Aplica estilo a todos os elementos que possuem a mesma classe. Permite reutilizar estilos.
+    - Seletor de ID (#seletor-id): Aplica estilo a um ÚNICO elemento na página. O ID deve ser exclusivo.
+    - Seletor Descendente (div p): Aplica estilo a um elemento (p) apenas quando ele está dentro de outro (div).
+    - Seletor Combinado (h1, h2): Aplica o mesmo estilo a múltiplos elementos, separando-os por vírgula.
+*/
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    background: red;
+}
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    padding: 20px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.imagem {
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.25);
+    object-fit: cover;
+}
+
+.conteiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+    gap: 20px;
+}
+
+.main {
+    display: grid;
+    justify-content: end;
+    align-items: end;
+    padding: 30px 20px;
+    border-left: 6px solid #008c45;
+    padding-left: 20px;
+}
+
+/* Exemplo de Seletor Combinado (h1 e h2) */
+h1, h2 {
+    font-size: 64px;
+    font-weight: 900;
+    color: #008c45;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.subtitulo-main {
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.conhecida {
+    font-size: 24px;
+    color: #ce2b37;
+    margin-bottom: 15px;
+    border-left: 5px solid #008c45;
+    padding-left: 10px;
+}
+
+/* Exemplo de Seletor de Elemento */
+p {
+    font-size: 24px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+/* Exemplo de Seletor de ID - Exclusivo para este elemento! */
+#seletor-id {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 2px dashed #ce2b37;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Exemplo de Seletor Descendente - P apenas dentro de uma div */
+div.conteudo p {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+.lista ul li::before {
+    content: "✔️ ";
+    color: #008c45;
+    font-weight: bold;
+}
+
+li {
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.banner-1 {
+    margin-top: 30px;
+    background-color: #008c45;
+    gap: 20px;
+}
+
+.conteudo {
+    padding: 20px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    display: grid;
+    justify-content: end;
+    align-items: end;
+}
+
+.titulo-banner-1 {
+    font-size: 54px;
+    grid-column: 1/-1;
+    text-shadow: 4px 2px black;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+.descricao-banner-1 {
+    color: #e0e0e0;
+    font-size: 24px;
+    margin-top: 40px;
+    align-self: stretch;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.lista-banner-1 {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 40px 40px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.lista-banner-1 li::before {
+    content: "🏛️ ";
+    color: #ffffff;
+}
+
+.banner-2 {
+    background: #ffffff;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.titulo-banner-2 {
+    font-size: 54px;
+    text-align: center;
+    grid-column: 1/-1;
+    text-transform: uppercase;
+    color: #008c45;
+    text-shadow: 4px 2px black;
+}
+
+.descricao-banner-2 {
+    color: #000000;
+    font-size: 24px;
+    text-align: justify;
+    margin-top: 40px;
+    align-self: stretch;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.lista-banner-2 {
+    background: #008c45;
+    border-radius: 4px;
+    padding: 40px 40px;
+    box-shadow: 10px 5px 5px black;
+    color: white;
+}
+
+.lista-banner-2 li::before {
+    content: "🍝 ";
+    color: #ffffff;
+}
+
+.banner-3 {
+    background: #ce2b37;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.titulo-banner-3 {
+    font-size: 54px;
+    text-align: center;
+    grid-column: 1/-1;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 4px 2px black;
+}
+
+.descricao-banner-3 {
+    color: #e0e0e0;
+    font-size: 24px;
+    text-align: justify;
+    margin-top: 40px;
+    align-self: stretch;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.lista-banner-3 {
+    background: #ffffff;
+    border-radius: 4px;
+    padding: 40px 40px;
+    box-shadow: 10px 5px 5px black;
+}
+
+.lista-banner-3 li::before {
+    content: "✨ ";
+    color: #ce2b37;
+}
+
+ footer {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: silver;
+}
+
+.padrao-rodape {
+    font-size: 20px;
+}

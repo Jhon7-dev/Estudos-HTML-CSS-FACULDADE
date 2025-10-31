@@ -1,0 +1,44 @@
+body{
+     display: grid;
+     justify-content: center;
+     background: -moz-linear-gradient();
+     font-family: Arial, Helvetica, sans-serif;
+}
+#nome{
+     border-radius: 4px;
+     padding: 5px;
+}
+#email{
+       border-radius: 4px;
+        padding: 5px;
+}
+#data{
+       border-radius: 4px;
+       padding: 5px;
+}
+#telefone{
+       border-radius: 4px;
+       padding: 5px;
+}
+button{
+     background-color: blue; color: white; padding: 8px 16px; border: none; border-radius: 5px;
+}
+p{
+     border: 2px solid red; padding: 10px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+
+#quadrado1, #quadrado2 {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #333;
+  display: inline-block;
+  margin: 20px;
+  vertical-align: top;
+  padding: 10px;
+}

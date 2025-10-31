@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Atividade HTML5 Multimídia</title>
+  <!-- Ligação com o estilo externo -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Formulário</h1>
+ 
+  <fieldset>
+    <legend>Correção Ortográfica</legend>
+    <p>
+      <label>Com Spellcheck: <input type="text" spellcheck="true" placeholder=" "></label>
+    </p>
+    <p>
+      <label>Sem Spellcheck: <input type="text" spellcheck="false" placeholder=" ."></label>
+    </p>
+  </fieldset>
+
+   
+  <form>
+    <fieldset>
+      <legend>Formulário</legend>
+
+      <p><label>Telefone: <input type="tel" name="telefone" placeholder="(11) 99999-9999"></label></p>
+      <p><label>Email: <input type="email" name="email" required></label></p>
+      <p><label>Site: <input type="url" name="site"></label></p>
+      <p><label>Data de nascimento: <input type="date" name="dataNascimento"></label></p>
+      <p><label>Cor favorita: <input type="color" name="cor"></label></p>
+      <p><label>Idade: <input type="number" name="idade" min="0" max="120"></label></p>
+      <p><label>CEP: <input type="text" name="cep" pattern=" " placeholder="00000-000"></label></p>
+
+      <p>
+        <button type="submit">Enviar</button>
+        <button type="submit" formnovalidate>Salvar Rascunho</button>
+      </p>
+    </fieldset>
+  </form>
+
+ 
+  <details>
+    <summary>Dicas da Atividade</summary>
+    <p>Revise todos os elementos exigidos: formulários, multimídia, toolbar e correção ortográfica.</p>
+  </details>
+
+  <h3>Bloco de Anotações (editável)</h3>
+  <div class="anotacoes" contenteditable="true">
+    Escreva aqui suas anotações...
+  </div>
+ 
+  <div class="toolbar">
+    <strong>Arquivo:</strong>
+    <button type="button" onclick="alert('Novo arquivo criado!')">Novo</button>
+    <button type="button" onclick="alert('Arquivo salvo!')">Salvar</button>
+    &nbsp;&nbsp; | &nbsp;&nbsp;
+    <strong>Ajuda:</strong>
+    <a href="help.html">Help</a> |
+    <a href="about.html">About</a>
+  </div>
+ 
+  <fieldset>
+    <legend>🎵 Música</legend>
+    <audio src="musica.mp3" controls autoplay></audio>
+  </fieldset>
+
+ <fieldset>
+  <legend>🎬 Vídeo</legend>
+  <video src="https://youtu.be/m0y4jzpqvEk" controls autoplay width="400"></video>
+</fieldset>
+
+
+</body>
+</html>

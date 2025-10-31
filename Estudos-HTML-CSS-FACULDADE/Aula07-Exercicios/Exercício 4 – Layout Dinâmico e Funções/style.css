@@ -1,0 +1,246 @@
+/*
+    Seletor Universal: Reset básico para todos os elementos.
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: grid;
+}
+
+/*
+    Header Fixo: Exemplo de posicionamento com 'position: fixed'.
+    Usa a função `rgb()` para a cor de fundo.
+*/
+/*img {
+  width: 300px; largura fixa
+  height: 300px; /* altura fixa */
+/* object-fit: cover; corta a imagem mantendo proporção */
+/* border-radius: 10px; opcional, arredonda as bordas */
+/* } */
+header {
+  /* background-image: url(img/pexels-viktoria-alipatova-1083711-2074130.jpg); */
+  /* height: 900px; */
+  /* object-fit: cover; */
+  background: #302626;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  /* background: #4B2E05; */
+  line-height: 1.5;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 40px;
+
+  /* justify-content: center; */
+}
+.titulo-header {
+  display: block;
+  font-size: 50px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-align: start;
+  font-weight: bold;
+  color: white;
+  font-weight: 100;
+}
+nav {
+  display: flex; /* Para alinhar os links lado a lado */
+  gap: 50px; /* Adiciona espaçamento entre os links */
+}
+.links {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: white; /* Cor do texto, pode ser alterada */
+  /* font-family: Arial, sans-serif; */
+  font-family: Georgia, "Times New Roman", Times, serif;
+
+  font-size: 28px;
+  position: relative; /* Fundamental para posicionar o sublinhado */
+  padding: 35px 0; /* Adiciona espaço vertical para que o sublinhado não cole no texto */
+}
+.links::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px; /* Espessura do sublinhado */
+  background-color: white; /* Cor do sublinhado, pode ser alterada */
+  transform: scaleX(0); /* Inicialmente, o sublinhado tem largura zero */
+  transform-origin: bottom left; /* A animação começa no canto inferior esquerdo */
+  transition: transform 0.3s ease-out; /* Transição suave para a animação */
+}
+.links:hover::after {
+  transform: scaleX(1); /* Ao passar o mouse, a largura se expande para 100% */
+}
+#container {
+  display: grid;
+  grid-column: 1fr 1fr;
+  /* justify-content: center; */
+  justify-items: center;
+  padding: 80px;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.banner-1 {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  grid-column: 1;
+  /* grid-template-columns: 1fr 1fr; */
+  grid-column: 3;
+  /* width: 50%; */
+  padding: 70px 80px;
+  gap: 20px;
+}
+img {
+  grid-column: 1/2;
+  align-self: center;
+}
+
+.imagem-container {
+  max-width: 100%;
+  width: 1000px;
+  display: block;
+}
+.titulo-cafe {
+  grid-column: 1/-1;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 44px;
+}
+.descricao-banner {
+  font-size: 24px;
+}
+#container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 40px;
+  align-items: stretch;
+  /* justify-self: center; */
+  /* justify-items: center; */
+  /* justify-content: center; */
+
+  background: #f5f3ef;
+}
+.banner-2 {
+  flex: 1; /* cada banner ocupa metade do espaço */
+  max-width: 600px; /* limite opcional */
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 550px; /* altura menor */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.banner-2:hover {
+  transform: translateY(-5px); /* efeito leve ao passar o mouse */
+}
+
+.img-banner-2 {
+  width: 100%;
+  height: 180px; /* menor e proporcional */
+  object-fit: cover;
+  border-bottom: 3px solid #B08968; /* cor da paleta */
+}
+.titulo-banner-2 {
+  font-size: 1.8rem;
+  color: #4B2E05;
+  margin: 10px 0;
+  font-family: "Merriweather", Georgia, serif;
+}
+
+.descricao-banner-2 {
+  font-size: 1rem;
+  padding: 0 20px 15px 20px;
+  color: #5a4633;
+}
+.img-banner-2 {
+  border-radius: 10px;
+  width: 300px;
+  height: 500px;
+  object-fit: cover; /* deixa a imagem proporcional e preenche o espaço */
+  margin: 20px 0; /* espaço entre o título e o texto */
+}
+.descricao-banner-2 {
+  text-align: center;
+  font-size: 24px;
+  padding: 30px 20px;
+}
+
+/* Footer padrão */
+footer {
+  background-color: rgb(51, 51, 51);
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+.cafe-section {
+  height: 100vh; /* ocupa a altura total da tela */
+  background-image: url(img/img-banner.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* efeito parallax */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #f5f3ef;
+  font-family: "Merriweather", Georgia, serif;
+}
+.cafe-section::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* cobre toda a section */
+  background-color: rgba(0, 0, 0, 0.4); /* preto translúcido */
+  z-index: 1;
+}
+.overlay {
+  position: relative;
+  z-index: 2; /* acima da camada escura */
+}
+/* camada de cor por cima da imagem */
+.overlay {
+  padding: 60px;
+  text-align: center;
+  width: calc(100% - 100px); /* conforme o requisito do exercício */
+  /* border: 2px solid rgba(166, 124, 82, 0.4); */
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.3), 0 2px 4px rgba(0,0,0,0.1); */
+}
+
+/* texto e botão */
+.overlay h2 {
+  font-size: 3.4rem;
+  margin-top: 80px;
+  /* margin-bottom: 0px; */
+}
+
+.overlay p {
+  font-size: 1.9rem;
+  margin-bottom: 30px;
+}
+
+.overlay button {
+  background-color: #b08968;
+  color: #fff;
+  border: none;
+  padding: 17px 25px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.overlay button:hover {
+  background-color: #a67c52;
+}
