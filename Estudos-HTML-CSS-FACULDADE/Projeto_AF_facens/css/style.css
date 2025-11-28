@@ -1,0 +1,96 @@
+body {
+  height: 3000px;
+  padding-top: 75px;
+}
+.box-shadow {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+}
+#home-quote {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/bg-quote.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+    min-height: 80vh; /* ocupa 80% da altura da tela */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media(max-width:767px){
+  #home-quote .display-4{
+    font-size: 2.5rem;
+  }
+  body{
+    padding: 0px;
+  }
+  .fixed-top{
+    position:relative;
+  }
+}
+.lista-plano li + li{
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+.lista-plano li {
+  padding: 1rem;
+  border-bottom: 1px solid rgba(0,0, 0,.2);
+
+}
+.carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row {
+  --bs-gutter-x: 0;
+}
+/* Remove o sublinhado dos links do FAQ */
+#perguntasFrequentes a {
+  text-decoration: none;
+  color: inherit; /* mantém a cor do texto padrão */
+}
+
+/* Remove o sublinhado dos links do footer */
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* (opcional) adiciona efeito hover */
+#perguntasFrequentes a:hover,
+footer a:hover {
+  color: var(--bs-primary); /* muda pra cor do tema bootstrap */
+  text-decoration: underline; /* ou mantenha none se não quiser sublinhar */
+}
+.container a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
+/* Remove o sublinhado dos links do FAQ */
+#perguntasFrequentes a {
+  text-decoration: none;
+  color: inherit; /* mantém a cor do texto normal */
+}
+
+/* Remove o sublinhado dos links do footer */
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* No hover: muda a cor (opcional), mas sem sublinhado */
+#perguntasFrequentes a:hover,
+footer a:hover {
+  color: var(--bs-primary); /* opcional: cor do tema Bootstrap */
+  text-decoration: none;   /* mantém sem sublinhado */
+}
+#perguntasFrequentes a,
+footer a {
+  transition: color 0.3s ease;
+}
